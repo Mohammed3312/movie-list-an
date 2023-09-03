@@ -6,7 +6,7 @@ import { MoviedetailsService } from 'src/app/services/moviedetails.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
+export class SearchComponent  {
   moviess:any = []
   constructor(private movies:MoviedetailsService){}
 

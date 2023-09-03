@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MoviedetailsService } from 'src/app/services/moviedetails.service';
 
 @Component({
@@ -6,15 +6,12 @@ import { MoviedetailsService } from 'src/app/services/moviedetails.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   moviess: any = [];
   num: number = 0;
   trending:any = []
   constructor(private movies: MoviedetailsService) {}
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.moviesDetails()
     this.trendingmovieData()
   }
 
